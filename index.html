@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Guide - AI-Powered Git Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">
+                GitHub Guide
+            </h1>
+            <p class="subtitle">Your AI-powered Git assistant</p>
+        </header>
+
+        <main>
+            <div class="selection-panel">
+                <div class="dropdown-wrapper">
+                    <label for="topic-select" class="label">Select a Git Topic</label>
+                    <div class="custom-dropdown" id="topic-dropdown">
+                        <div class="dropdown-selected" id="topic-selected">
+                            <span class="placeholder">Choose a topic...</span>
+                            <span class="dropdown-arrow">▼</span>
+                        </div>
+                        <div class="dropdown-search-wrapper">
+                            <input type="text" class="dropdown-search" id="topic-search" placeholder="Search topics...">
+                        </div>
+                        <div class="dropdown-options" id="topic-options">
+                            <!-- Options will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown-wrapper" id="scenario-wrapper">
+                    <label for="scenario-select" class="label">Select a Scenario</label>
+                    <div class="custom-dropdown" id="scenario-dropdown">
+                        <div class="dropdown-selected" id="scenario-selected">
+                            <span class="placeholder">Choose a scenario...</span>
+                            <span class="dropdown-arrow">▼</span>
+                        </div>
+                        <div class="dropdown-search-wrapper">
+                            <input type="text" class="dropdown-search" id="scenario-search" placeholder="Search scenarios...">
+                        </div>
+                        <div class="dropdown-options" id="scenario-options">
+                            <!-- Options will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-input-wrapper" id="text-input-wrapper" style="display: none;">
+                    <label for="custom-question" class="label">Describe Your Situation</label>
+                    <textarea 
+                        id="custom-question" 
+                        class="custom-textarea" 
+                        placeholder="Explain your Git situation or question... (e.g., 'I accidentally committed to the wrong branch' or 'How do I revert my last commit?')"
+                        rows="4"
+                    ></textarea>
+                    <button class="submit-btn" id="submit-custom">Get Help</button>
+                </div>
+            </div>
+
+            <div class="response-panel" id="response-panel" style="display: none;">
+                <div class="response-header">
+                    <h2>Solution</h2>
+                    <button class="close-btn" id="close-response">×</button>
+                </div>
+                <div class="response-content" id="response-content">
+                    <!-- Response will be displayed here -->
+                </div>
+            </div>
+
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Getting your answer...</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
