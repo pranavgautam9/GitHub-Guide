@@ -1,0 +1,20 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle with gradient -->
+  <defs>
+    <linearGradient id="bgGradientIcon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#24292e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1e22;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="silverGradientIcon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c0c0c0;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e8e8e8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c0c0c0;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Main circle background -->
+  <circle cx="64" cy="64" r="60" fill="url(#bgGradientIcon)" stroke="#2f363d" stroke-width="2"/>
+  
+  <!-- GG text in silver -->
+  <text x="64" y="82" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="url(#silverGradientIcon)" text-anchor="middle" letter-spacing="-3">GG</text>
+</svg>
