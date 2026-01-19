@@ -252,6 +252,8 @@ main {
     border-radius: 15px;
     padding: 25px;
     animation: slideIn 0.3s ease;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 @keyframes slideIn {
@@ -305,6 +307,9 @@ main {
     color: #e0e0e0;
     font-size: 1.05rem;
     line-height: 1.8;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    max-width: 100%;
 }
 
 .response-content h1,
@@ -360,11 +365,16 @@ main {
     border: 1px solid rgba(192, 192, 192, 0.2);
     border-radius: 8px;
     padding: 15px;
-    overflow-x: auto;
     margin: 15px 0;
     font-family: 'Courier New', monospace;
     font-size: 0.9rem;
     line-height: 1.5;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
+    white-space: pre;
+    word-break: normal;
 }
 
 .response-content code {
@@ -373,12 +383,17 @@ main {
     border-radius: 4px;
     font-family: 'Courier New', monospace;
     font-size: 0.9em;
+    word-wrap: break-word;
+    white-space: pre-wrap;
 }
 
 .response-content pre code {
     background: transparent;
     padding: 0;
     border-radius: 0;
+    white-space: pre;
+    word-break: normal;
+    display: block;
 }
 
 .response-content p {
