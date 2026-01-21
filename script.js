@@ -333,11 +333,14 @@ Format your response in clear, readable text. Be helpful and thorough.`;
     }
 }
 
-// Call backend API (which proxies to OpenAI)
+// Call backend API (which proxies to OpenAI/Groq)
 async function callOpenAI(prompt) {
-    // Determine the API endpoint - use relative path for same origin, or full URL for different origin
-    const apiUrl = '/api/chat';
-    
+    // Use API_BASE_URL from config.js if available, otherwise fallback to relative path
+    const baseUrl = (typeof API_BASE_URL !== 'undefined' && API_BASE_URL)
+        ? API_BASE_URL
+        : '';
+    const apiUrl = `${baseUrl}/api/chat`;
+
     const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
